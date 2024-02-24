@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Lexend", sans-serif;
+  background-color: #1e1e1e;
+  color: white;
+  scroll-behavior: smooth;
+}
+
+/* Define the animation */
+@keyframes slideIn {
+  from {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Apply the animation to the nav element */
+.open_nav {
+  animation: slideIn 0.5s ease forwards;
+}
+.swiper-next-btn{
+  @apply absolute top-1/2 right-0 bg-grey-15 text-3xl md:text-4xl lg:text-5xl rounded-full text-green-60 -translate-y-1/2 z-10;
+}
+.swiper-prev-btn{
+  @apply absolute top-1/2 left-0 -translate-y-1/2 text-3xl md:text-4xl lg:text-5xl bg-grey-15 rounded-full text-green-60 z-10;
+}
+
+@layer utilities {
+  .paragraph {
+    @apply max-md:text-sm text-lg text-grey-70 font-light;
+  }
+
+  .heading_1 {
+    @apply font-medium text-5xl max-lg:text-4xl max-md:text-[28px];
+  }
+  .heading_2 {
+    @apply  max-lg:text-4xl max-md:text-3xl text-6xl font-medium;
+  }
+  .heading_3 {
+    @apply max-lg:text-base text-[22px];
+  }
+  .heading_4 {
+    @apply max-lg:text-base text-[20px];
+  }
+  .btn {
+    @apply max-lg:text-sm text-base max-sm:px-3 py-3 px-5 rounded-full hover:bg-green-65 hover:bg-opacity-50 transition;
+  }
+}
+
+/* For WebKit */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #333;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #555;
+  border-radius: 10px;
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #555 #333;
+}
+
+/* For IE and Edge */
+body {
+  scrollbar-face-color: #333;
+  scrollbar-shadow-color: #555;
+  scrollbar-highlight-color: #555;
+  scrollbar-3dlight-color: #555;
+  scrollbar-darkshadow-color: #333;
+  scrollbar-track-color: #333;
+  scrollbar-arrow-color: #555;
+}
