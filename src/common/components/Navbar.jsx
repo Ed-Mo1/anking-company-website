@@ -59,6 +59,7 @@ const Navbar = () => {
               {navlinks.map(({ id, title, path }) => (
                 <NavLink
                   onClick={() => setOpen(false)}
+                  end={true}
                   key={id}
                   to={path}
                   className={({ isActive }) =>
