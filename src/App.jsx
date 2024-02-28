@@ -1,5 +1,4 @@
-import { Route, Routes } from "react-router-dom";
-import { Footer, Navbar } from "./common/components/index";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import {
   Home,
   About,
@@ -10,23 +9,52 @@ import {
   NotFound,
 } from "./routes/index.jsx";
 
+import Layout from "./common/components/Layout.jsx";
+const router = createBrowserRouter([
+  {
+    path: "/banking-company-website/",
+    element: <Layout />,
+    children: [
+      {
+        path: "/banking-company-website/",
+        element: <Home />,
+      },
+      {
+        index: true,
+        element: <Home />,
+      },
+      {
+        path: "/banking-company-website/careers",
+        element: <Careers />,
+      },
+      {
+        path: "/banking-company-website/about",
+        element: <About />,
+      },
+      {
+        path: "/banking-company-website/security",
+        element: <Security />,
+      },
+      {
+        path: "/banking-company-website/login",
+        element: <Login />,
+      },
+      {
+        path: "/banking-company-website/sign_up",
+        element: <SignUp />,
+      },
+      {
+        path: "*",
+        element: <NotFound />,
+      },
+    ],
+  },
+]);
+
 function App() {
   return (
     <div className="overflow-hidden">
-      <Navbar />
-      <Routes>
-        <Route path="/banking-company-website/" element={<Home />} />
-        <Route path="/banking-company-website/careers" element={<Careers />} />
-        <Route path="/banking-company-website/about" element={<About />} />
-        <Route
-          path="/banking-company-website/security"
-          element={<Security />}
-        />
-        <Route path="/banking-company-website/login" element={<Login />} />
-        <Route path="/banking-company-website/sign_up" element={<SignUp />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-      <Footer />
+      <RouterProvider router={router} />
     </div>
   );
 }
