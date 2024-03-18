@@ -25,7 +25,7 @@ const Products = () => {
             <Button text="For Businesses" isActive={false} />
           </div>
         </div>
-        <div className="grid mt-10 gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center">
+        <div className="grid mt-10 gap-5 lg:divide-x-[0.5px] divide-grey-15 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center">
           {products.map((product) => (
             <ProductCard key={product.id} {...product} />
           ))}

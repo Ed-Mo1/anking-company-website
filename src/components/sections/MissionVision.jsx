@@ -36,7 +36,7 @@ const MissionVision = () => {
           </div>
         </div>
         <div className="flex flex-row-reverse max-lg:flex-col mb-8  gap-8 justify-between items-center">
-          <div className="p-10 pb-0 relative rounded-t-3xl flex-1 bg-grey-15 max-lg:before:left-1/2 max-lg:before:translate-x-[-50%] max-lg:before:bottom-0 max-lg:before:h-[2px] max-lg:before:w-1/2 before:absolute lg:before:top-1/2 lg:before:translate-y-[-50%] lg:before:w-[2px] lg:before:right-0 lg:before:h-1/2 before:bg-green-60">
+          <div className="p-10 pb-0 relative rounded-t-3xl flex-1 bg-grey-15 max-lg:before:left-1/2 max-lg:before:translate-x-[-50%] max-lg:before:bottom-0 max-lg:before:h-[2px] max-lg:before:w-1/2 before:absolute lg:before:top-1/2 lg:before:translate-y-[-50%] lg:before:w-[2px] lg:before:left-0 lg:before:h-1/2 before:bg-green-60">
             <img src={vision} alt="img" className="mx-auto"/>
           </div>
           <div className="flex-1 max-lg:text-center">
